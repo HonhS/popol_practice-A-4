@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="TEM">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="css/css.css" type="text/css" rel="stylesheet">
+<title>유진건설</title>
+
+<style>
+* {
+margin:0; padding:0;
+box-sizing:border-box;
+}
+ol,ul {
+list-style:none;
+}
+a {
+text-decoration:none;
+color:#333333;
+}
+div.wrap {
+width:1200px;
+height:700px;
+margin:auto;
+background:#f2f2f2;
+}
+div.header {
+position:relative;
+width:1200px;
+height:100px;
+background:#f2f2f2;
+}
+div.logo {
+width:200px;
+height:100px;
+float:left;
+}
+div.nav {
+width:1000px;
+height:100px;
+float:left;
+}
+	ul.main {
+	width:600px;
+	height:50px;
+	float:right;
+	margin-top:50px;
+	margin-right:25px;
+	position:relative;
+	}
+			ul.main > li {
+			width:150px;
+			height:50px;
+			text-align:center;
+			float:left;
+			padding-top:13px;
+			border-top:1px solid #000000;
+			border-bottom:1px solid #000000;
+			border-left:1px solid #000000;
+			border-right:0px solid #000000;
+			}
+			ul.main > li:nth-child(4) {
+			border-right:1px solid #000000;
+			}
+				ul.sub {
+				width:150px;
+				height:0;
+				background:#ff5050;
+				position:absolute;
+				top:50px;
+				z-index:11;
+				overflow:hidden;
+				transition:0.5s;
+				}
+				ul.sub > li {
+				width:150px;
+				height:0;
+				padding-top:0;
+				overflow:hidden;
+				transition:0.5s;
+				}
+			ul.main:hover > li > ul.sub {
+			width:150px;
+			height:150px;
+			}
+			ul.main:hover > li > ul.sub > li {
+			width:150px;
+			height:50px;
+			padding-top:13px;
+			}
+			ul.main > li > ul.sub > li:hover {
+			background:#ffc000;s
+			}
+	div.nav_bg {
+	position:absolute;
+	top:100px;
+	left:0px;
+	width:1200px;
+	height:0px;
+	background:#ff5050;
+	z-index:10;
+	transition:0.5s;
+	}
+	ul.main:hover ~ div.nav_bg {
+	height:150px;
+	}
+div.slide {
+width:1200px;
+height:300px;
+overflow:hidden;
+position:relative;
+}
+a#slide1 {
+position:absolute;
+top:0;
+left:0;
+animation:slide01 6s infinite;
+opacity:0;
+}
+a#slide2 {
+position:absolute;
+top:0;
+left:0;
+animation:slide02 6s infinite;
+opacity:0;
+}
+a#slide3 {
+position:absolute;
+top:0;
+left:0;
+animation:slide03 6s infinite;
+opacity:0;
+}
+
+@keyframes slide01 {
+33%{opacity:1;}
+66%{opacity:0;}
+99%{opacity:0;}
+}
+@keyframes slide02 {
+33%{opacity:0;}
+66%{opacity:1;}
+99%{opacity:0;}
+}
+@keyframes slide03 {
+33%{opacity:0;}
+66%{opacity:0;}
+99%{opacity:1;}
+}
+div.section {
+width:1200px;
+height:200px;
+}
+	div.notice {
+	width:400px;
+	height:200px;
+	float:left;
+	}
+		div.nottab{
+		width:150px;
+		height:30px;
+		float:left;
+		text-align:center;
+		padding-top:7px;
+		border-top:1px solid #000000;
+		border-left:1px solid #000000;
+		border-right:1px solid #000000;
+		border-bottom:0px solid #000000;
+		background:#ffffff;
+		}
+		div.empty {
+		width:250px;
+		height:30px;
+		border-bottom:1px solid #000000;
+		float:left;
+		}
+		div.notsec {
+		width:400px;
+		height:170px;
+		padding:25px;
+		border-left:1px solid #000000;
+		border-right:1px solid #000000;
+		border-bottom:1px solid #000000;
+		background:#ffffff;
+		float:left;
+		}
+		div.layer {
+		position:fixed;
+		top:30%;
+		left:40%;
+		width:300px;
+		height:300px;
+		opacity:0;
+		visibility:hidden;
+		text-align:center;
+		background:#ffffff;
+		}
+		div.layer:target {
+		visibility:visible;
+		opacity:1;
+		}
+
+	div.gallery {
+	width:400px;
+	height:200px;
+	float:left;
+	}
+		div.galltab{
+		width:150px;
+		height:30px;
+		float:left;
+		text-align:center;
+		padding-top:7px;
+		border-top:1px solid #000000;
+		border-left:1px solid #000000;
+		border-right:1px solid #000000;
+		border-bottom:0px solid #000000;
+		background:#ffffff;
+		}
+		div.empty {
+		width:250px;
+		height:30px;
+		border-bottom:1px solid #000000;
+		float:left;
+		}
+		div.gallsec {
+		width:400px;
+		height:170px;
+		padding:25px;
+		border-left:1px solid #000000;
+		border-right:1px solid #000000;
+		border-bottom:1px solid #000000;
+		background:#ffffff;
+		float:left;
+		}
+	div.quick {
+	width:400px;
+	height:200px;
+	float:left;
+	}
+div.footer {
+width:1200px;
+height:100px;
+}
+	div.lower {
+	width:1000px;
+	height:100px;
+	float:left;
+	}
+		div.lowmenu{
+		width:1000px;
+		height:50px;
+		padding-top:13px;
+		text-align:center;
+		}
+		div.copyright {
+		width:1000px;
+		height:50px;
+		padding-top:13px;
+		text-align:center;
+		}
+	div.family {
+	width:200px;
+	height:100px;
+	float:left;
+	}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="#"><img src="images/logo.gif" alt="유진건설"></a>
+		</div>
+		<div class="nav">		
+			<ul class="main">
+				<li><a href="#">회사소개</a>
+					<ul class="sub">
+						<li><a href="#">인사말</a></li>
+						<li><a href="#">조직구성도</a></li>
+						<li><a href="#">오시는길</a></li>
+					</ul>
+				</li>
+				<li><a href="#">사업영역</a>
+					<ul class="sub">
+						<li><a href="#">전원주택</a></li>
+						<li><a href="#">도시재생</a></li>
+						<li><a href="#">인테리어</a></li>
+					</ul>	
+				</li>
+				<li><a href="#">입주정보</a>
+					<ul class="sub">
+						<li><a href="#">입주단지</a></li>
+						<li><a href="#">입주캘린더</a></li>
+					</ul>
+				</li>
+				<li><a href="#">고객센터</a>
+					<ul class="sub">
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">건축상담</a></li>
+						<li><a href="#">홍보자료실</a></li>
+					</ul>
+				</li>
+			</ul>
+		<div class="nav_bg"></div>
+		</div>
+	</div>
+	<div class="slide">
+		<a href="#" id="slide1"><img src="images/slide01.jpg" alt="슬라이드1"></a>
+		<a href="#" id="slide2"><img src="images/slide02.jpg" alt="슬라이드2"></a>
+		<a href="#" id="slide3"><img src="images/slide03.jpg" alt="슬라이드3"></a>
+	</div>
+	<div class="section">
+		<div class="notice">
+			<div class="nottab">
+				<div class="noti">
+					공지사항
+				</div>
+				<div class="empty">
+				</div>
+			</div>
+			<div class="notsec">
+				<a href="#popup1">1.공지사항1번</a><br>
+				<a href="#popup2">2.공지사항2번</a><br>
+				<a href="#popup3">3.공지사항3번</a>
+				<div class="layer" id="popup1">
+					<h2>공지사항 1번</h2>
+					<p>Lorem ipsum dolor sit amet</p><br><br><br><br><br>
+					<a href="#">× 닫기</a>
+				</div>
+				<div class="layer" id="popup2">
+					<h2>공지사항 2번</h2>
+					<p>Lorem ipsum dolor sit amet</p><br><br><br><br><br>
+					<a href="#">× 닫기</a>
+				</div>
+				<div class="layer" id="popup3">
+					<h2>공지사항 3번</h2>
+					<p>Lorem ipsum dolor sit amet</p><br><br><br><br><br>
+					<a href="#">× 닫기</a>
+				</div>
+			</div>
+		</div>
+		<div class="gallery">
+			<div class="galltab">
+			<div class="gall">
+					갤러리
+				</div>
+				<div class="empty">
+				</div>
+			</div>
+			<div class="gallsec">
+				<a href="#"><img src="images/gallimg1.jpg" alt="갤러리1"></a>
+				<a href="#"><img src="images/gallimg2.jpg" alt="갤러리2"></a>
+				<a href="#"><img src="images/gallimg3.jpg" alt="갤러리3"></a>
+			</div>
+		</div>
+		<div class="quick">
+			<a href="#"><img src="images/quick.jpg" alt="바로가기"></a>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="lower">
+			<div class="lowmenu">
+				<a href="#">견적상담</a> | <a href="#">하나둘</a> | <a href="#">셋넷</a> | <a href="#">개인정보처리방침</a>
+			</div>
+			<div class="copyright">
+				<a href="#">Copyrightⓒ 유진건설 All Rights Reserved.</a>
+			</div>
+		</div>
+		<div class="family">
+			<a href="#"><img src="images/family.jpg" alt="패밀리사이트"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
